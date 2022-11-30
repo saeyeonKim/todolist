@@ -35,7 +35,7 @@ function App() {
   const [todo, setTodo] = useState("");
   // useState를 사용하는 이유는 데이터를 저장할 공간을 만들어주는 것. [a,b]에서 a는 내가 지정한 값, b는 변경할 변수
   // ""를 쓰는 이유는 안에 들어갈 값이 비어있다는 뜻, ""가 있어야 안에 값이 들어갈 수 있다.
-  // 형식은 위의 방식대로
+  // 형식은 위의 방식대로!!
 
   const addUserHandler = () => {
     const newContent = {
