@@ -9,6 +9,7 @@ function CustomButton(props) {
     textAlign,
     margin,
   } = props;
+  console.log(props);
   return (
     <button
       style={{
@@ -24,6 +25,7 @@ function CustomButton(props) {
       onClick={onClick}
     >
       {children}
+      {/* app.js의 추가하기,삭제하기 */}
     </button>
   );
 }
