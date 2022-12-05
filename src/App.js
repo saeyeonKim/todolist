@@ -55,13 +55,17 @@ function App() {
   };
 
   const onChangeHandler = (id) => {
-    setContents(
-      contents.map((content) => {
-        return content.id === id ? (content.isDone = true) : content;
-        // content id값이 내 id값이랑 같으면 true 값이 할당, 아니면 content(그대로놓는다)
-        // map은 배열 안의 정한 값만 골라서 바꿀 수 있는데 filter는 그 중에 맞는 조건만 골라서 가져온다.
-      })
-    );
+    const copy = [...contents];
+    setContents(copy);
+    // setContents(
+    //   contents.map((content) => {
+    //     return content.id === id ? (content.isDone = true) : content;
+
+    //     //content를 content.isDone = false로 했을 때 삭제하기와 완료버튼을 누르면 전체가 다 삭제된다.
+    //     // content id값이 내 id값이랑 같으면 true 값이 할당, 아니면 content(그대로놓는다)
+    //     // map은 배열 안의 정한 값만 골라서 바꿀 수 있는데 filter는 그 중에 맞는 조건만 골라서 가져온다.
+    //   })
+    // );
   };
 
   return (
